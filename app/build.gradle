@@ -1,10 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
     compileSdk 32
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "uz.shark.weather"
@@ -35,16 +40,68 @@ android {
 }
 
 dependencies {
-
+    //ktx
     implementation 'androidx.core:core-ktx:1.7.0'
+
+    //material
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+
+    //dagger - hilt
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+
+    //retrofit
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //glide
+    def glide_version = "4.12.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    //checker
+    def chucker_version = "3.4.0"
+    debugImplementation "com.github.chuckerteam.chucker:library:$chucker_version"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:$chucker_version"
+
+    /*fragment*/
+    implementation "androidx.fragment:fragment-ktx:1.4.1"
+
+    //navigation
+    def navigation_version = "2.4.0-alpha05"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    //lifecycle
+    def lifecycle_version = "2.3.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+//    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+//    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    //timber
+    def timber_version = "5.0.1"
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    //logging interception dependency
+    def interceptionVersion = "4.8.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptionVersion"
+
+    //test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    //RxBinding
+    /*rxBinding*/
+    def rxbinding_version = "4.0.0"
+    implementation "com.jakewharton.rxbinding4:rxbinding:$rxbinding_version"
+
 }
