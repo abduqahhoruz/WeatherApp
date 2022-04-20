@@ -3,4 +3,19 @@
     <string name="title_forecast">Forecast</string>
     <string name="title_search">Search</string>
     <string name="title_favourites">Favourites</string>
+
+    <!--errors-->
+    <string name="wrong_format_name">Wrong format! min 3 characters</string>
+    <string name="wrong_format">Wrong format</string>
+    <string name="required_field">Required field</string>
+    <string name="invalid_enum">Invalid type</string>
+    <string name="no_connection">No internet connection</string>
+    <string name="server_error">Server error</string>
+    <string name="empty_data">Empty data</string>
+    <string name="unknown_error">Unknown error occurred!!! Please try again later</string>
+    <string name="error_occurred">Error occured</string>
+    <string name="loading_text">LoadingText</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="wind_speed">Speed Wind</string>
 </resources>

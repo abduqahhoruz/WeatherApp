@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="errors">
+        <item>@string/wrong_format_name</item>
+        <item>@string/wrong_format</item>
+        <item>@string/required_field</item>
+        <item>@string/invalid_enum</item>
+        <item>@string/no_connection</item>
+        <item>@string/server_error</item>
+        <item>@string/empty_data</item>
+
+        <item>@string/unknown_error</item>
+    </string-array>
+
+</resources>

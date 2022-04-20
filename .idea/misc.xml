@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/drawable-v24/ic_humidity.xml" value="0.2025" />
+        <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/drawable-v24/ic_pressure.xml" value="0.2025" />
+        <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/drawable-v24/ic_wind.xml" value="0.2025" />
         <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/layout/activity_main.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/layout/fragment_dashboard.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Shark/AndroidStudioProjects/Tasks/Weather/app/src/main/res/layout/fragment_favourites.xml" value="0.2526041666666667" />

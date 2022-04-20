@@ -6,6 +6,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.viewbinding.ViewBinding
 import uz.shark.weather.R
 
@@ -26,9 +27,8 @@ abstract class BaseActivity<B : ViewBinding>(val bindingFactory: (LayoutInflater
         setContentView(binding.root)
         setupItems()
         baseActivity = this
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as? NavHostFragment
-        navController = navHostFragment?.navController
+
+
     }
 
 

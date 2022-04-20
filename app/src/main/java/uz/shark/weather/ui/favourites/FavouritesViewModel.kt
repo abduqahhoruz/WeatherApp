@@ -1,13 +1,12 @@
 package uz.shark.weather.ui.favourites
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import uz.shark.weather.data.WeatherApi
+import javax.inject.Inject
 
-class FavouritesViewModel : ViewModel() {
+@HiltViewModel
+class FavouritesViewModel @Inject constructor(private val api: WeatherApi) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is favourite Fragment"
-    }
-    val text: LiveData<String> = _text
+
 }
